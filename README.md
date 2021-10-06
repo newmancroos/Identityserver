@@ -2,6 +2,7 @@
 
 <b>Basic Configuration for IdentityServer in the startup.cs</b>
 <p>
+	<pre>
 	services.AddIdentityServer()
 		.AddInMemoryClients(new List<Client>())
 		.AddInMemoryIdentityResources(new List<IdentityResource>())
@@ -15,6 +16,7 @@
 		app.UseRouting();
 		app.UseIdentityServer();
 	}
+	</pre>
 </p>
 <p>
 	Identit server is ready in this stage but clients, resources and users are empty. but we can find OpenID Connect discovery document in the end-point /.well-known/openid-configuration

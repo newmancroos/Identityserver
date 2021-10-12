@@ -36,7 +36,7 @@ namespace IdpfromScottbrady
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
             app.UseRouting();
             app.UseIdentityServer();
             app.UseEndpoints(endpoints =>

@@ -63,6 +63,37 @@
 	An Api resources allows you to model access to an entire protected resource, an Api, with inidivitual permission level that a client application can request access to.
 </p>
 <p>
+	<pre>
+	services.AddAuthentication(options =>
+    {
+        options.DefaultScheme = "cookie";
+        options.DefaultChallengeScheme = "oidc";
+    })
+    .AddCookie("cookie")
+    .AddOpenIdConnect("oidc", options =>
+    {
+	    options.Authority = "https://localhost:5000";
+        options.ClientId = "oidcClient";
+        options.ClientSecret = "SuperSecretPassword";
+    
+        options.ResponseType = "code";
+        options.UsePkce = true;
+        options.ResponseMode = "query";
+    
+        // options.CallbackPath = "/signin-oidc"; // default redirect URI
+        
+        // options.Scope.Add("oidc"); // default scope
+        // options.Scope.Add("profile"); // default scope
+        options.Scope.Add("api1.read");
+        options.SaveTokens = true;
+    });
+	</pre>
+	here options.SaveTokens = true; makes the identity and access token to be saved and accessible using the code
+	<pre>
+		HttpConnect.GetTokenAsync("access_token");
+	</pre>
+</p>
+<p>
 A quick tip, the openid scope is always required when using OpenID Connect flows (where you want to receive an identity token)
 </p>
 <a href="https://www.scottbrady91.com/Identity-Server/Getting-Started-with-IdentityServer-4"> Whole tutorial</a>

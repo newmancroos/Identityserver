@@ -24,7 +24,7 @@ namespace OpenIdDictServer
 
             var manager =
                 scope.ServiceProvider.GetRequiredService<IOpenIddictApplicationManager>();
-
+            
             if (await manager.FindByClientIdAsync("console") is null)
             {
                 await manager.CreateAsync(new OpenIddictApplicationDescriptor

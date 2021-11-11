@@ -39,6 +39,8 @@ namespace IdpfromScottbrady
                 .AddInMemoryApiScopes(Config.GetApiScopes())
                 .AddTestUsers(Config.GetTestUsers())
                 .AddDeveloperSigningCredential();
+                //*******************Uncommenting below line will add extra claims to the user***************
+                //.AddProfileService<IdentityServerProfileService>();
                 
             services.AddControllersWithViews();
         }

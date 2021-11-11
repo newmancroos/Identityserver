@@ -31,7 +31,7 @@ namespace IdpfromScottbrady
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>(); ;
 
-            
+
             services.AddIdentityServer()
                 .AddInMemoryClients(Config.GetClients())
                 .AddInMemoryIdentityResources(Config.GetIdentityResurces())
@@ -43,7 +43,8 @@ namespace IdpfromScottbrady
                         builder => builder.UseSqlServer(connectionString, sqloptions => sqloptions.MigrationsAssembly(migrationAssembly)))
                 .AddConfigurationStore(options => options.ConfigureDbContext =
                         builder => builder.UseSqlServer(connectionString, sqlOptions => sqlOptions.MigrationsAssembly(migrationAssembly)))
-                .AddAspNetIdentity<IdentityUser>();
+                .AddAspNetIdentity<IdentityUser>()
+                .AddProfileService<IdentityServerProfileService>();
 
             services.AddControllersWithViews();
         }

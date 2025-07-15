@@ -1,4 +1,14 @@
 # Identityserver
+### What is JWT (Json Web Token)?
+ JWT token is a compact, URL-safe means of representing claims to be transffered between two parties.Encoded with Base64. It's an open standard (RFC 7519) used to securily transmit informationas a Json object. In soimple term a way for a server to identify a user and their permission.
+
+ ### Parts of Jwt Token
+ 	* Header   (Algorithm and Token type)
+  	* Payload  (Data)
+   	* Signature (Verification)
+    
+ 
+
 
 <b>Basic Configuration for IdentityServer in the startup.cs</b>
 <p>

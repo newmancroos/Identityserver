@@ -24,6 +24,15 @@
   	* Toekn Endpoint (/token)   -> A critical component used by relaying parties (Clients) to obtain tokens (Access token, ID Token and refresh token. Allows exchange of the client application with Authorization code, ClientId and Client Secret
   	* UserInfo Endpoint (/usernfo)  -> Additional claims requested by the provider. It allows client applications to retrive user profile information after a user has successfullly authenticated with OpenId provider.
 
+## OpenId connect Authentication flow:
+	- Authorization Code Flow  -> "Code"
+ 	- Implicit Flow  -> id_token token
+  	- Hybrit Flow -> code, id token or code token or code, id_token
+
+
+## Identity Server 4 Terminologies:
+<img width="1043" height="598" alt="image" src="https://github.com/user-attachments/assets/ea6eaa98-1645-4ea5-9bcc-6ee0faa97038" />
+
 
 <b>Basic Configuration for IdentityServer in the startup.cs</b>
 <p>

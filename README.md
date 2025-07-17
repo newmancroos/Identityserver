@@ -16,13 +16,13 @@
 <img width="859" height="641" alt="image" src="https://github.com/user-attachments/assets/8aa2cb7c-9609-4f9f-b666-8e3b2e889e6b" />
 
 ## OpenID COnnect:
-- Aimple Authentication Layer
+- Simple Authentication Layer
 - Built on Oauth2
 - Extension for OAuth Authorization Code flow(grant)
 - OpenId Connect End-point
   	* Authorization Endpoint (/authorize)   -> Res[ponsible for Authentication and consent process of enduser
-  	* Toekn Endpoint (/token)   -> Allows exchange of the client application with Authorization code, ClientId and Client Secret
-  	* UserInfo Endpoint (/usernfo)  -> Additional claims requested by the provider
+  	* Toekn Endpoint (/token)   -> A critical component used by relaying parties (Clients) to obtain tokens (Access token, ID Token and refresh token. Allows exchange of the client application with Authorization code, ClientId and Client Secret
+  	* UserInfo Endpoint (/usernfo)  -> Additional claims requested by the provider. It allows client applications to retrive user profile information after a user has successfullly authenticated with OpenId provider.
 
 
 <b>Basic Configuration for IdentityServer in the startup.cs</b>

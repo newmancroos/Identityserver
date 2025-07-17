@@ -7,7 +7,17 @@
   	* Payload  (Data)
    	* Signature (Verification)
     
- 
+ ## OAuth Grant Types and Flows:
+ - Authorization Code Flow
+ - Client Crredential
+ - Resource Owner Password
+ - Implicit flow
+
+<img width="859" height="641" alt="image" src="https://github.com/user-attachments/assets/8aa2cb7c-9609-4f9f-b666-8e3b2e889e6b" />
+
+## OpenID COnnect:
+
+
 
 
 <b>Basic Configuration for IdentityServer in the startup.cs</b>

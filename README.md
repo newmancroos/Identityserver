@@ -31,6 +31,8 @@
 
 
 ## Identity Server 4 Terminologies:
+
+Identity Server is a .Net based framework for implementing OpenId Connect and OAuth2 in applications
 <img width="1043" height="598" alt="image" src="https://github.com/user-attachments/assets/ea6eaa98-1645-4ea5-9bcc-6ee0faa97038" />
 
 <img width="1161" height="680" alt="image" src="https://github.com/user-attachments/assets/c64d4755-38ad-4a1c-b706-04789b30a11e" />

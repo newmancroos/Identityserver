@@ -37,6 +37,12 @@ Identity Server is a .Net based framework for implementing OpenId Connect and OA
 
 <img width="1161" height="680" alt="image" src="https://github.com/user-attachments/assets/c64d4755-38ad-4a1c-b706-04789b30a11e" />
 
+## Identoity Server Flow for Movie WebApi:
+
+<img width="670" height="378" alt="image" src="https://github.com/user-attachments/assets/37c61a7d-f08d-4e2d-ad99-b30c9a90cacf" />
+
+
+
 
 <b>Basic Configuration for IdentityServer in the startup.cs</b>
 <p>

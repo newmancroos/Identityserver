@@ -47,7 +47,62 @@ Identity Server is a .Net based framework for implementing OpenId Connect and OA
 	* Install IdentityServer Nuget package into IdentityServer project
 	* Install Microsoft.AspNetCore.Authentication.JwtBearer  in Api project
 </pre>
-
+<p>
+	In IdentityServer Project add a class called Config.cs
+	<pre>
+		public class Config
+		{
+		    public static IEnumerable<Client> Clients =>
+			new Client[]
+			{
+			    new Client
+			    { 
+				ClientId="movieClient",
+				AllowedGrantTypes=GrantTypes.ClientCredentials,
+				ClientSecrets=
+				{ 
+				    new Secret("secret".Sha256())
+				},
+				AllowedScopes={"movieAPI"}
+			    }
+			};
+		
+		    public static IEnumerable<ApiResource> ApiResources=>
+			new ApiResource[]
+			{
+			};
+		
+		    public static IEnumerable<ApiScope> ApiScopes=>
+			new ApiScope[]
+			{
+			    new ApiScope("movieAPI","Movie API")
+			};
+		
+		    public static IEnumerable<IdentityResource> IdentityResources=>
+			new IdentityResource[]
+			{
+			};
+		
+		    public static List<TestUser> TestUsers=>
+			new List<TestUser>
+			{
+			};
+		
+		}
+	</pre>
+ 	<p>
+  		And in programe.cs add these configuration
+    <pre>
+    builder.Services.AddIdentityServer()
+    .AddInMemoryClients(Config.Clients)
+    //.AddInMemoryIdentityResources(Config.IdentityResources)
+    //.AddInMemoryApiResources(Config.ApiResources)
+    .AddInMemoryApiScopes(Config.ApiScopes)
+    //.AddTestUsers(Config.TestUsers)
+    .AddDeveloperSigningCredential();
+    </pre>
+  	</p>
+</p>
 <b>Basic Configuration for IdentityServer in the startup.cs</b>
 <p>
 	<pre>

@@ -42,7 +42,11 @@ Identity Server is a .Net based framework for implementing OpenId Connect and OA
 <img width="670" height="378" alt="image" src="https://github.com/user-attachments/assets/37c61a7d-f08d-4e2d-ad99-b30c9a90cacf" />
 
 
+<pre>
 
+	* Install IdentityServer Nuget package into IdentityServer project
+	* Install Microsoft.AspNetCore.Authentication.JwtBearer  in Api project
+</pre>
 
 <b>Basic Configuration for IdentityServer in the startup.cs</b>
 <p>
